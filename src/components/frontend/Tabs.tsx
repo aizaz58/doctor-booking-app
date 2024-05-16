@@ -59,7 +59,7 @@ const tabsData=[
     <Tabs aria-label="Tabs with underline"  style="underline">
       {tabsData.map((tab,i)=>{
         return(
-<Tabs.Item active title={tab.title} icon={tab.icon}>
+<Tabs.Item active key={i} title={tab.title} icon={tab.icon}>
       {tab.component}
       </Tabs.Item>
   
