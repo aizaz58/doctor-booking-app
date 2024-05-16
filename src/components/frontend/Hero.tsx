@@ -30,7 +30,7 @@ const Hero = () => {
                   <li>
                     <a
                       href="/#"
-                      className="inline-flex items-center bg-blue-600 justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-700 lg:px-7"
+                      className="inline-flex items-center bg-blue-600 justify-center rounded-md  px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-900 lg:px-7"
                     >
                   Need Doctor Urgently
                     </a>
@@ -57,29 +57,7 @@ const Hero = () => {
                     <span className="text-sm text-gray-400 ">Active Patients</span>
                   </div>
                 </div>
-                <div className="clients pt-16">
-                  <h6 className="mb-6 flex items-center text-xs font-normal text-body-color dark:text-dark-6">
-                    Some Of Our Clients
-                    <span className="ml-3 inline-block h-px w-8 bg-body-color"></span>
-                  </h6>
-
-                  <div className="flex items-center space-x-4">
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/ayroui.svg"
-                    />
-
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/graygrids.svg"
-                    />
-
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/uideck.svg"
-                    />
-                  </div>
-                </div>
+                
               </div>
             </div>
             <div className="hidden px-4 lg:block lg:w-1/12"></div>

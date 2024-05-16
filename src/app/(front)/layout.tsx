@@ -4,12 +4,18 @@ import React, { ReactNode } from 'react'
 
 function Layout({children}:{children:ReactNode}) {
   return (
-    <div className='bg-blue-950'>
+    <div className=''>
+      <div className='fixed top-0 w-full z-50'>
         <NavBar/>
-        <div className="max-w-5xl mx-auto py-6">
+
+      </div>
+        <div className=" z-50 border-t container border-gray-400/30 left-0 right-0 bg-white  w-full  mx-auto py-4 fixed top-[65px]">
       <MegaMenu/>
      </div>
+     <div className='pt-40 z-0'>
         {children}
+
+     </div>
     </div>
   )
 }
