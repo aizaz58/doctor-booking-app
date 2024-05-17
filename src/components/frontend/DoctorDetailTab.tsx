@@ -16,6 +16,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import Availability from '../Availability'
 
 export function DoctorDetailTab() {
   return (
@@ -50,20 +51,11 @@ export function DoctorDetailTab() {
       <TabsContent value="availability">
         <Card>
           <CardHeader>
-            <CardTitle>Password</CardTitle>
-            <CardDescription>
-              Change your password here. After saving, you&apos;ll be logged out.
-            </CardDescription>
+            <CardTitle className='text-xl uppercase text-slate-500 tracking-widest'>Select a Date and Time</CardTitle>
+           
           </CardHeader>
-          <CardContent className="space-y-2">
-            <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" />
-            </div>
+          <CardContent className="space-y-2 p-0 sm:p-2 md:p-6  ">
+            <Availability/>
           </CardContent>
           <CardFooter>
             <Button>Save password</Button>
