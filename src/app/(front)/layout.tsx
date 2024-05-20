@@ -9,10 +9,10 @@ function Layout({children}:{children:ReactNode}) {
         <NavBar/>
 
       </div>
-        <div className=" z-50 border-t container border-gray-400/30 left-0 right-0 bg-white  w-full  mx-auto py-4 fixed top-[65px]">
+        {/* <div className=" z-50 border-t container border-gray-400/30 left-0 right-0 bg-white  w-full  mx-auto py-4 fixed top-[65px]">
       <MegaMenu/>
-     </div>
-     <div className='pt-40 z-0'>
+     </div> */}
+     <div className='z-0 pt-20'>
         {children}
 
      </div>
