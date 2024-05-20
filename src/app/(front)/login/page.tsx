@@ -16,7 +16,7 @@ const defaultValues={
     email:'',
     password:''
 }
-export default function page() {
+export default function Page() {
     const {
         register,
         setValue,

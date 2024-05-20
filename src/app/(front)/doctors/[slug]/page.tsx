@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-export default function page() {
+export default function Page() {
   return (
     <div className='bg-slate-50 py-20 min-h-screen'>
         <div className="max-w-4xl border border-gray-200 mx-auto bg-white shadow-md rounded-md">
