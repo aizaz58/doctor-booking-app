@@ -12,12 +12,13 @@ export async function createUser(data:FormData){
 
 try {
     const existingUSer=await prismaClient.user.findUnique({where:{email}})
+    debugger
     if(existingUSer){
-        return NextResponse.json({
-            data:null,
+        return {
+            data:undefined,
             error:`User with ${email} already exists.`,
             status:400
-        })
+        }
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -62,8 +63,8 @@ try {
     };
 } catch (error:any) {
     return {
-        error: `${error.message}`,
-        data: null,
+        error: error,
+        data: undefined,
         status: 500
       };
 }    

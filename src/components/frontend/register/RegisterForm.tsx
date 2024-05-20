@@ -38,15 +38,18 @@ const [isButtonLoading,setIsButtonLoading]=useState(false)
         try {
           setIsButtonLoading(true)
           values.role=role
+          debugger
          const user= await createUser(values)
-         if(user&& user.status==200){
+         if(user&& user.status===200){
            toast.success("User created successfully.")
            reset()
+}else{
+  toast.error(user.error)
 }
 setIsButtonLoading(false)
           
         } catch (error:any) {
-          console.log(error)
+          console.log(error.message)
           toast.error(error)
           setIsButtonLoading(false)
         }
