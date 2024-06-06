@@ -23,7 +23,7 @@ try {
 
     const hashedPassword = await bcrypt.hash(password, 10);
     //Generate Token
-    const generateToken = () => {
+    const generateToken:any = () => {
       const min = 100000; // Minimum 6-figure number
       const max = 999999; // Maximum 6-figure number
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -48,7 +48,7 @@ try {
     const message =
       "Thank you for registering with Medical App. To complete your registration and verify your email address, please enter the following 6-digit verification code on our website :";
     const sendMail = await resend.emails.send({
-      from: "hafizaizaz58@gmail.com",
+      from:" Acme <onboarding@resend.dev>",
       to: [email],
       subject: "Verify Your Email Address",
       react: EmailTemplate({ name:firstName, token, linkText, message }),
@@ -68,4 +68,37 @@ try {
         status: 500
       };
 }    
+}
+
+export async function getUserById(id:string){
+  try {
+    if(id){
+      const user = await prismaClient.user.findUnique({
+        where:{id}
+    })
+    return {data:user,
+      error:null,
+      status:200
+    }
+  }
+  } catch (error:any) {
+    return {data:null,
+      error:error.message,
+      status:500
+  }
+}
+}
+
+export async function updateUserById(id:string){
+if(id){
+  try {
+    const updatedUSer=await prismaClient.user.update({
+      where:{id},
+      data:{ isVerfied:true }
+    })
+    return updatedUSer
+  } catch (error) {
+    console.log(error)
+  }
+}
 }

@@ -42,13 +42,13 @@ function DoctorCard({isInPerson}:{isInPerson?:boolean}) {
                 <p className='flex items-center '><Stethoscope className='w-4 h-4 mr-2 flex-shrink-0'/>
                 <span>Family Medicine</span>
                 </p>
-                <p className='bg-green-200 py-3 px-6 uppercase'>Available Today</p>
+                <p className='bg-green-200 text-xs md:text-sm py-3 px-2 md:px-6 uppercase'>Available Today</p>
             </div>
         </div>
        </Link>
         <div className="pt-6 border-t border-gray-400">
 <h3 className=' flex gap-4 text-sm justify-between items-center'><span className='text-gray-700'>Tue, Mar 12</span><span className='font-bold'>$120</span></h3>
-<div className="py-3 grid grid-cols-3 gap-1">
+<div className="py-3 grid grid-cols-2 md:grid-cols-3 gap-1">
     {timeStamp.slice(0,5).map((item,i)=>{
         return(
             <Link href="#" key={i} className='flex  bg-blue-600  text-white items-center justify-center text-sm py-2 border border-gray-200 rounded-md hover:bg-blue-800'>{item.time}{item.period}</Link>

@@ -107,7 +107,7 @@ export default function NavBar() {
               </div>
               <div className="py-6">
                 <Link
-                  href="#"
+                  href="/login"
                   className="-mx-3 block rounded-lg px-3 py-1 text-base font-semibold leading-7 text-gray-950 hover:bg-gray-50"
                 >
                   Log in
