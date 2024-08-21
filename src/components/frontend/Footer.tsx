@@ -102,7 +102,7 @@ const socialinks=[
                     <div className="max-w-xs">
                         <img src="https://www.floatui.com/logo.svg" className="w-32" />
                         <p className="leading-relaxed mt-2 text-[15px]">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.
                         </p>
                     </div>
                     {/* <form 
@@ -159,10 +159,10 @@ const socialinks=[
                 </div>
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
-                       {socialinks.map(item=>{
+                       {socialinks.map((item,i)=>{
                         const Icon=item.icon
                         return(
-                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
+                         <li key={i} className="w-10 h-10 border rounded-full flex items-center justify-center">
                          <a href={item.link} className={item.color}>
                             <Icon className=' w-6 h-6 '/>
                             
